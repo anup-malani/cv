@@ -1,0 +1,19 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.toc
+
+# Generated PDF stays in repo? No — compiled CV PDFs live in anup-malani/website_personal as dated releases.
+# So we keep main_sorted.pdf out of git here; /publish-cv copies it to website_personal under a YYMM filename.
+main_sorted.pdf
+
+# macOS / editor cruft
+.DS_Store
+.vscode/
+.idea/

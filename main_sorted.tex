@@ -1,0 +1,1037 @@
+%!TeX program = pdflatex
+% Geoff Boeing's Curriculum Vitae
+% Email: boeing@usc.edu
+% Web: https://geoffboeing.com/
+% Repo: https://github.com/gboeing/cv
+
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto}    % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+\usepackage{setspace} % custom line spacing
+
+% what is your name?
+\newcommand{\myname}{Anup Malani}
+
+% select default typefaces
+\usepackage{ebgaramond} % document's serif typeface
+\usepackage{tgheros}    % document's sans serif typeface
+
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
+
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {city planning, housing, street networks, transportation, urban design, urban informatics},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+\begin{document}
+    \raggedright{}
+
+    % display your name as the document title
+    \namefont{\myname}
+
+    % affiliation and contact info blocks
+    \vspace{1em}
+    \begin{minipage}[t]{0.700\textwidth}
+        % current primary affiliation, left-aligned
+        Lee and Brena Freeman Professor \\
+        University of Chicago Law School \\
+        Chicago, IL 60622 
+    \end{minipage}
+    \begin{minipage}[t]{0.295\textwidth}
+        % contact info details, right-aligned
+        \flushright{}
+        \href{mailto:amalani@uchicago.edu}{amalani@uchicago.edu} \\
+        +1 773 702 9602 \\
+        \href{https://www.anupmalani.com}{www.anupmalani.com}
+    \end{minipage}
+
+
+    \section*{Research Areas}
+
+    \begin{itemize}
+
+        \item - Value of medical innovation (including drugs) and financial contracts (including health insurance and credit)
+        \item - Regulation of healthcare markets and providers (including fraud, products liability, and medical malpractice)
+        \item - Surveillance and modeling of infection disease and infectious disease control 
+        \item - Value and regulation of new technologies (AI, blockchain) in law and finance
+        \item - Empirical and experimental methods and policy evaluation 
+
+    \end{itemize}
+    
+    \section*{Teaching Areas}
+
+    \begin{itemize}
+
+        \item Economics: Microeconomics, health care economics \& policy, law \& economics, law \& economic development
+        \item Law: Health law, food \& drug law, securities law, bankruptcy law, corporate law
+
+    \end{itemize}
+
+    %     \section*{Research Interests}
+
+    % \begin{itemize}
+
+    %     \item I study how sickness generates both physical and financial risks for households, and how innovation and financial contracts, such as insurance and borrowing help mitigate those risks
+    %     \item I study the regulation of healthcare, markets and providers, including healthcare fraud, products liability, and medical malpractice
+    %     \item I study the role of urban slums in economic development and how such function
+    %     \item I study the measurement and model the dynamics of infectious diseases, including flu and SARS-CoV-2
+
+    % \end{itemize}
+
+    
+    \section*{Education}
+
+    \begin{tablist}
+
+        \item[Ph.D.] \tab{}Economics, University of Chicago (Committee: Gary Becker, Tomas Philipson, Will Manning), 2003
+
+        % \item[]  \tab{}Committee: Gary Becker, Tomas Philipson, Willard Manning
+        
+        % \item[]  \tab{}Malani, A. (2003). Placebo effects, self-selection and the external validity of clinical trials \\ \href{https://www.proquest.com/pqdtglobal/docview/305291636/B27E4F5857104EBAPQ/4?accountid=14657&sourcetype=Dissertations%20&%20Theses}{[ProQuest]} \href{https://github.com/anup-malani/website_personal/blob/main/publications/2003_Malani_DissertationPlaceboEffects.pdf}{[PDF]}
+        
+        \item[J.D.]  \tab{}University of Chicago, 2000
+        \item[B.S.F.S.]  \tab{}School of Foreign Service, Georgetown University, 1992
+
+    \end{tablist}
+
+
+
+    % \section*{Appointments}
+
+    \section*{Professional Experience}
+    
+    \begin{tablist}
+    
+        \item[2006--]   \tab{}University of Chicago Law School \\
+                              Lee and Brena Freeman Professor of Law, 2011--\\
+                              Professor and Aaron Director Research Scholar, 2009--2011 \\
+                              Professor, 2006--2009
+    
+        \item[2010--]   \tab{}University of Chicago Pritzker School of Medicine \\
+                              Professor (courtesy)
+    
+        \item[2008--09] \tab{}Harvard Law School \\
+                              Roscoe Pound Visiting Professor, 2008--2009\\
+                              Visiting Director, Petrie-Flom Center for Health Law Policy, Biotechnology and Bioethics, 2008--2009 \\
+                              Visiting Professor, 2006
+    
+        \item[2004--06] \tab{}University of Virginia School of Medicine \\
+                              Associate Professor, Health Evaluation Sciences
+    
+        \item[2002--06] \tab{}University of Virginia Law School \\
+                              Associate Professor
+    
+        \item[2001--02] \tab{}U.S. Supreme Court \\
+                              Law Clerk to Justice Sandra Day O'Connor
+    
+        \item[2000--01] \tab{}U.S. Court of Appeals for the D.C. Circuit \\
+                              Law Clerk to Judge Stephen F. Williams
+    
+    \end{tablist}
+
+% \begin{tablist}
+
+%         \item[2019--]   \tab{}University of Southern California \\
+%                               Assistant Professor, Department of Urban Planning and Spatial Analysis, 2019-- \\
+%                               Faculty Affiliate, Spatial Sciences Institute, 2021--
+
+%         \item[2021--]   \tab{}Brookings Institution \\
+%                               Nonresident Senior Fellow, Metropolitan Policy Program \\
+
+%         \item[2018--19] \tab{}Northeastern University \\
+%                               Assistant Professor, School of Public Policy and Urban Affairs \\
+%                               Faculty Affiliate, Network Science Institute \\
+%                               Faculty Affiliate, Global Resilience Institute
+
+%         \item[2017--18] \tab{}University of California, Berkeley \\
+%                               Postdoctoral Researcher, Department of City and Regional Planning
+
+%     \end{tablist}
+
+\section*{Other Academic and Service Appointments and Affiliations}
+
+    \begin{tablist}
+    
+        \item[2021--]   \tab{}American Academy of Arts \& Sciences \\
+                              Elected Member
+    
+        \item[2021--]   \tab{}Covid Crisis Group (formerly Covid Commission Planning Group) \\
+                              Member
+
+        \item[2013--]   \tab{}International Innovation Corps \\
+                              Founder and Faculty Director
+    
+        \item[2009--]   \tab{}National Bureau of Economic Research \\
+                              Research Associate, Development Economics, 2018--\\
+                              Research Associate, Health Care, 2012--\\
+                              Faculty Research Fellow, Health Care, 2009--12
+    
+        \item[2009--]   \tab{}University of Chicago \\
+                              Mansueto Institute, Faculty Advisory Board Member, 2020-- \\
+                              Tata Centre for Development at UChicago, Faculty Director, 2016--17 \\
+                              Becker Friedman Institute, Research Advisory Board, 2015--17 \\
+                              Neubauer Collegium, Board member, 2015--17 \\
+                              Committee on South Asian Studies, Faculty member, 2014-- \\
+                              Center for Health and the Social Sciences, Faculty Affiliate, 2014-- \\
+                              Committee on Clinical and Translational Science, Biological Sciences Division, Faculty member, 2009--
+    
+        \item[2020]     \tab{}Chicago Scientific COVID-19 Vaccine Work Group \\
+        Member
+
+        \item[2020]     \tab{}World Economic Forum, Regional Action Group for South Asia, COVID-19\\ Member
+    
+        \item[2020]     \tab{}World Bank \\
+                              Consultant on Vaccination in South Asia, on NPIs in South Asia
+    
+        \item[2020]     \tab{}Asian Development Bank \\ 
+                            Member, High-Level Advisory Panel to Support COVID-19 Recovery in Southeast Asia \\
+
+                          Consultant, Indonesian Government on Covid-19
+    
+        \item[2013--16] \tab{}University of Chicago Press \\
+                              Board Member
+    
+        \item[2012--18] \tab{}University of Southern California \\
+                              Senior Fellow, Leonard D. Schaeffer Center for Health Policy \& Economics
+    
+        \item[2012--14] \tab{}Forum for Health Economics \& Policy \\
+                              Associate Editor
+    
+        \item[2011--13] \tab{}American Law \& Economics Association \\
+                              Board Member
+    
+        \item[2010--13] \tab{}Center for Disease Dynamics and Economic Policy \\
+                              Senior Fellow
+    
+        \item[2009--11] \tab{}Robert Wood Johnson Foundation \\
+                              Member, National Advisory Committee, Public Health Law Research program
+    
+        \item[2008--11] \tab{}Resources for the Future \\
+                              University Fellow
+    
+        \item[2007--21] \tab{}Journal of Law \& Economics \\
+                              Editor
+    
+        \item[1992--94] \tab{}Institute for International Economics, DC \\
+                              Research Associate
+    
+    \end{tablist}
+    
+    \section*{Commercial Affiliations}
+
+    \begin{tablist}
+
+        \item[2023--]   \tab{}Cornerstone \\
+                              Expert
+    
+        \item[2020--23]   \tab{}Compass Lexecon \\
+                              Senior Consultant
+    
+        \item[2021--23]   \tab{}Intensity \\
+                              Senior Advisor
+    
+        \item[2019--20] \tab{}Perlin \\
+                              Advisor
+    
+        \item[2014--18] \tab{}Precision Health Economics \\
+                              Academic Affiliate
+    
+        \item[1999] \tab{}Wachtell, Lipton, Rosen \& Katz, NY \\
+                              Summer Associate
+                              
+        \item[1999] \tab{}Kellogg, Huber, Hansen, Todd \& Evans, DC \\
+                              Summer Associate
+                              
+    \end{tablist}   
+
+    \input{Pubs_Sorted}
+        
+    \input{Pubs_Other}
+    
+    \section*{Op-eds and blogs}
+
+    \subsection*{Op-eds}
+
+    \begin{tablist}
+
+        \item[2022] \tab{}Anup Malani, Arpit Gupta, and Bartek Woda. Poverty rose but income inequality fell.  The Hindu, March 28, 2022.  \href{https://www.thehindu.com/opinion/op-ed/poverty-rose-but-income-inequality-fell/article65265220.ece/amp/}{[LINK]}
+        
+        \item[2022] \tab{}Anup Malani, Arpit Gupta, and Bartek Woda. The pandemic’s income inequality surprise.  The Indian Express, March 22, 2022. \href{https://indianexpress.com/article/opinion/columns/the-pandemics-income-inequality-surprise-covid-lockdown-poverty-economy-7830354/}{[LINK]} 
+        
+        \item[2021] \tab{}Sabareesh Ramachandran, Anup Malani, Satej Soman, and Alice Chen.  Modi govt should choose a vaccination policy that benefits India, not just the 45+.  ThePrint, April 14, 2021.  \href{https://theprint.in/opinion/modi-govt-should-choose-a-vaccination-policy-that-benefits-india-not-just-the-45/639600/}{[LINK]}
+        
+        \item[2021] \tab{}Reuben Abraham and Anup Malani, Devising a vaccine strategy for India.  Hindustan Times, January 7, 2021.  \href{https://www.hindustantimes.com/analysis/devising-a-vaccine-strategy-for-india/story-u12s0fA8oFOmfMxXo3St1H.html}{[LINK]}
+        
+        \item[2020] \tab{}Anup Malani.  Devise an India-specific Covid vaccination plan.  Hindustan Times.  November 20, 2020. \href{https://www.hindustantimes.com/analysis/devise-an-india-specific-covid-vaccination-plan/story-oVRwD2lv1XifvHO7OUQcqM.html}{[LINK]}
+        
+        \item[2020] \tab{}Anup Malani and Vaidehi Tandel.  The return of workers to cities isn’t a sign of normalcy.  Livemint, July 22, 2020.  \href{https://www.livemint.com/opinion/online-views/the-return-of-workers-to-cities-isn-t-a-sign-of-normalcy-11595426630227.html}{[LINK]}
+        
+        \item[2020] \tab{}Anup Malani, Manoj Mohanan, Satchit Balsari, and Anu Acharya.  Rethinking Covid-19 testing strategy.  The Hindu: Business Line, May 29, 2020.  \href{https://www.thehindubusinessline.com/opinion/rethinking-covid-19-testing-strategy/article31697253.ece}{[LINK]}
+        
+        \item[2020] \tab{}Daniel Hemel and Anup Malani.  If employers require workers to have antibodies, people will try to get sick, Washington Post, May 28, 2020.  \href{https://www.washingtonpost.com/outlook/2020/05/28/immunity-passports-antibodies-coronavirus/}{[LINK]}
+        
+        \item[2020] \tab{}Anu Acharya, Anup Malani and Manoj Mohanan.  Combining sampling and testing can be most effective to get the economy back on track.  Economic Times, April 24, 2020.  \href{https://economictimes.indiatimes.com/news/economy/policy/view-combining-sampling-and-testing-can-be-most-effective-to-get-the-economy-back-on-track/articleshow/75332462.cms}{[LINK]}
+        
+        \item[2020] \tab{}Anup Malani, David Kaiser, Rupal Bhattacharyya, and Bhramar Mukherjee.  Is there really no community transmission of coronavirus in India? Let’s do some math.  Quartz India, April 23, 2020.  \href{https://qz.com/india/1842275/is-there-really-no-community-transmission-of-coronavirus-in-india/}{[LINK]} 
+        
+        Reposted: Simple math calculations raise questions about India’s flat denial of Covid-19 community spread.  Scroll.in, Sept 1, 2020.  \href{https://scroll.in/article/960155/simple-math-calculations-raise-questions-about-indias-flat-denial-of-covid-19-community-spread}{[LINK]}
+        
+        \item[2020] \tab{}Anup Malani, Arpit Gupta and Reuben Abraham.  Why does India have so few Covid-19 cases and deaths?  Quartz India, April 16, 2020.  \href{https://qz.com/india/1839018/why-does-india-have-so-few-coronavirus-covid-19-cases-and-deaths/}{[LINK]}
+        
+        \item[2020] \tab{}Arpit Gupta, Anup Malani and Reuben Abraham.  Covid-19: To get an accurate estimate of the spread, India must ensure random community testing.  Hindustan Times, April 6, 2020.  \href{https://www.hindustantimes.com/analysis/covid-19-to-get-an-accurate-estimate-of-the-spread-india-must-ensure-random-community-testing/story-qJ8yKgDujtOnQygiBJuXYI.html}{[LINK]}
+        
+        \item[2020] \tab{}Arpit Gupta, Anup Malani and Reuben Abraham.  A mask and a shield.  Indian Express, Mar 31, 2020.  \href{https://indianexpress.com/article/opinion/columns/coronavirus-mask-shortage-n-95-masks-for-coronavirus-6339197/}{[LINK]}
+        
+        \item[2020] \tab{}Daniel Hemel and Anup Malani.  Trump can’t save us from the coronavirus. But governors and mayors can.  Washington Post, March 16, 2020.  \href{https://www.washingtonpost.com/outlook/2020/03/16/governors-mayors-emergency-powers-coronavirus/}{[LINK]}
+        
+        \item[2019] \tab{}Anup Malani. To Encourage New Housing, Tax It.  WSJ, July 9, 2019. \href{https://www.wsj.com/articles/to-encourage-new-housing-tax-it-11562526409}{[LINK]}
+        
+        \item[2018] \tab{}Cynthia Kinnan and Anup Malani.  Road Map for a Successful Modicare.  Mint, March 6, 2018. \href{https://www.livemint.com/Opinion/enERYnZY3MVuxvCzMpEuiJ/Road-map-for-a-successful-Modicare.html}{[LINK]}
+        
+        \item[2018] \tab{}Richard Holden and Anup Malani.  Why the I.R.S. Fears Bitcoin.  New York Times, January 22, 2018. \href{https://www.nytimes.com/2018/01/22/opinion/irs-bitcoin-fear.html}{[LINK]}
+        
+        \item[2017] \tab{}Darius Lakdawalla, Anup Malani, and Jay Bhattacharya.  Why America needs a ‘do-over’ on Medicaid reform.  The Conversation (May 11 2017).  \href{https://theconversation.com/why-america-needs-a-do-over-on-medicaid-reform-75524?sa=pg2&sq=Malani&sr=2}{[LINK]}
+        
+        \item[2010] \tab{}Anup Malani and Tomas Philipson.  Push for more trials may hurt patients.  Washington Examiner (July 21, 2010).  \href{http://www.washingtonexaminer.com/opinion/columns/Push-for-more-clinical-trials-may-hurt-patients-1002114-98875969.html}{[LINK]}.
+        
+        \item[2010] \tab{}Anup Malani.  Pay-for-delay or pay-for-innovation.  Forbes.com (July 15, 2010).  \href{http://www.forbes.com/2010/07/15/drug-patents-pharmaceuticals-opinions-contributors-anup-malani_2.html}{[LINK]}.
+        
+        \item[2009] \tab{}Anup Malani and Ramanan Laxminarayan.  Beyond swine flu: Superbugs.  Chicago Tribune (June 5, 2009).
+        
+        \item[2008] \tab{}M. Todd Henderson and Anup Malani. Capitalism 2.0: Do corporations exist solely to maximize their bottom lines? We don’t think so.  Forbes, p 30 (Mar 10, 2008). \href{https://www.forbes.com/forbes/2008/0310/030.html}{[LINK]}
+
+    \end{tablist}
+
+    \subsection*{Blogs and Online Articles}
+
+    \begin{tablist}
+
+        \item[2024] \tab{}Anup Malani, Cynthia Kinnan, Gabriella Conti, Alessandra Voena, and Kosuke Imai.  Pricing health insurance in India.  VoxDev (Dec 9, 2024).  \href{https://voxdev.org/topic/public-economics/pricing-health-insurance-india}{[LINK]}
+        
+        Gabriella Conti, Cynthia Kinnan, Anup Malani, Alessandra Voena.  Direct and spillover effects of access to health insurance in India.  VoxDev (Jan 7, 2022) \href{https://voxdev.org/topic/health/direct-and-spillover-effects-access-health-insurance-india}{[LINK]}
+        
+        \item[2017] \tab{}Darius Lakdawalla and Anup Malani.  How Republicans and Democrats can both keep their promises on health care.  The Conversation (Mar 2, 2017).  \href{https://theconversation.com/how-republicans-and-democrats-can-both-keep-their-promises-on-health-care-70974?sa=pg2&sq=Malani&sr=3}{[LINK]} 
+        
+        \item[2017] \tab{}Darius Lakdawalla and Anup Malani. Do you know what the Affordable Care Act does? Here’s a primer to help.  The Conversation (Feb 27, 2017). \href{https://theconversation.com/do-you-know-what-the-affordable-care-act-does-heres-a-primer-to-help-73736?sa=pg2&sq=Malani&sr=1}{[LINK]}
+        
+    \end{tablist}
+
+    % \section*{Invited Talks}
+
+    % \begin{tablist}
+
+    %     \item[2024] \tab{}\enquote{Street Network Science for Urban Planning.} NYU Center for Urban Science and Progress. Brooklyn, New York. Oct 28.
+
+    %     \item[2024] \tab{}\enquote{Urban Mobility and Street Network Science.} Cornell University, Tech Campus. Urban Data invited lecture. New York, New York. Sep 12.
+
+    %     \item[2024] \tab{}\enquote{Searching for Housing Online: The Challenges and Opportunities of Digitalization.} University of Texas at Austin, Good Systems Smart Cities Consortium. Austin, Texas. Apr 1.
+
+    %     \item[2024] \tab{}\enquote{Generalizability in Urban Science.} Cornell University, Department of City and Regional Planning. Ithaca, New York. Mar 29.
+
+    %     \item[2023] \tab{}\enquote{Urban Informatics for Transport: Measuring Networks and Access around the World.} University Consortium for Geographic Information Science. Washington, DC.\@ Feb 17.
+
+    %     \item[2023] \tab{}\enquote{Measuring Built Environments around the World: New Insights into Urban Sustainability and Health.} The Ohio State University, Center for Urban and Regional Analysis. Tech in the City Speaker Series. Columbus, Ohio. Feb 10.
+
+    %     \item[2022] \tab{}\enquote{Digitalization of the Housing Search: Homeseekers, Gatekeepers, and Market Legibility.} University of Washington, Interdisciplinary Ph.D. Program in Urban Design and Planning and Ph.D. Program in the Built Environment. Seattle, Washington. May 20.
+
+    %     \item[2022] \tab{}\enquote{Street Network Models and Indicators for Every Urban Area in the World.} National University of Singapore, Department of Real Estate seminar series. Singapore. Mar 14.
+
+    %     \item[2021] \tab{}\enquote{Urban Morphology and Street Network Science.} University of Cincinnati, Department of Geography. Cincinnati, Ohio. Oct 15.
+
+    %     \item[2021] \tab{}\enquote{Street Network Science and New Urban Data.} Cornell University, Tech Campus. Urban Data guest lecture. New York, New York. Oct 13.
+
+    %     \item[2021] \tab{}\enquote{Street Networks and the Evolving Urban Structure.} CEMFI Empirical Microeconomics seminar series. Madrid, Spain. Apr 8.
+
+    %     \item[2021] \tab{}\enquote{Street Network Models and Indicators for Every Urban Area in the World.} University of Bristol and Newcastle University Centre for Data. Spatial Analytics and Data seminar series. Newcastle upon Tyne, England. Jan 26.
+
+    %     \item[2020] \tab{}\enquote{Street Networks and the Evolving Urban Structure.} University of Chicago, Center for Spatial Data Science and Mansueto Institute for Urban Innovation. Chicago, Illinois. Nov 18.
+
+    %     \item[2020] \tab{}\enquote{Street Network Models and Indicators for Every Urban Area in the World.} Asian Institute of Management. The Science of Data seminar series. Makati, Philippines. Oct 26.
+
+    %     \item[2020] \tab{}\enquote{OSMnx for Urban Street Network Analysis.} University of California, Los Angeles, Department of Urban Planning. Introduction to GIS and Spatial Data Science, guest lecture. Los Angeles, California. Oct 26.
+
+    %     \item[2020] \tab{}\enquote{Introduction to Street Network Analysis with OSMnx.} Alan Turing Institute and University of Warwick. Data Science for Social Good lecture series. London, England. Aug 21.
+
+    %     \item[2020] \tab{}\enquote{Volunteered Geographic Information in Urban Analytics.} University of California, Berkeley, Department of City and Regional Planning. Introduction to Urban Data Analytics, guest lecture. Berkeley, California. Jun 17.
+
+    %     \item[2019] \tab{}\enquote{Urban Data Science: Street Networks and Travel Behavior.} Evidation Health. Data Science Seminar Series. Santa Barbara, California. May 16.
+
+    %     \item[2019] \tab{}\enquote{Network Science for Urban Transportation Modeling and Long-Range Planning.} MIT Megacity Logistics Lab at the Center for Transportation and Logistics. Cambridge, Massachusetts. May 9.
+
+    %     \item[2019] \tab{}\enquote{Computational Modeling and Analysis in Transportation System Design.} Cornell University. Systems Engineering Seminar Series. Ithaca, New York. Apr 12.
+
+    %     \item[2019] \tab{}\enquote{Growth, Access, and Resilience as Urban Technology Paradigms Shift.} The World Bank, Global Facility for Disaster Reduction and Recovery. Washington, DC.\@ Apr 3.
+
+    %     \item[2018] \tab{}\enquote{Computational Urban Street Network Analysis.} Virginia Tech. Urban Computing Seminar Series. Arlington, Virginia. Dec 4.
+
+    %     \item[2018] \tab{}\enquote{Urban Science and Street Networks.} Massachusetts Institute of Technology, Department of Urban Studies and Planning. Cambridge, Massachusetts. Nov 27.
+
+    %     \item[2018] \tab{}\enquote{Introduction to Street Network Analysis with OSMnx.} University of Helsinki, Digital Geography Lab. Helsinki, Finland. Nov 16.
+
+    %     \item[2018] \tab{}\enquote{Urban Street Network Science with OSMnx.} Tufts University, Department of Urban and Environmental Policy and Planning. Somerville, Massachusetts. Nov 15.
+
+    %     \item[2018] \tab{}\enquote{Free Data for Free Spaces: Democratizing and Disseminating Spatial Network Data and Models for Better Urban Planning.} Venice Biennale of Architecture. Venice, Italy. Oct 24.
+
+    %     \item[2018] \tab{}\enquote{Online Rental Housing Market Representation and the Digital Reproduction of Urban Inequality.} Harvard University, Joint Center for Housing Studies. Cambridge, Massachusetts. Sep 20.
+
+    %     \item[2018] \tab{}\enquote{Urban Street Network Science: Modeling, Simulating, and Visualizing Complex Transportation Systems.} Uber Technologies. San Francisco, California. Aug 20.
+
+    %     \item[2018] \tab{}\enquote{The Study of Street Networks in Urban Data Science.} NYU Center for Data Science. New York, New York. Apr 18.
+
+    %     \item[2018] \tab{}\enquote{Computational Street Network Analysis in Urban Form Studies.} Columbia University Graduate School of Architecture, Planning, and Preservation. New York, New York. Apr 17.
+
+    %     \item[2018] \tab{}\enquote{Scalable Methods for Acquiring, Analyzing, and Visualizing Urban Street Networks.} NYU Center for Urban Science and Progress, Applied Urban Science Group. Brooklyn, New York. Apr 16.
+
+    %     \item[2018] \tab{}\enquote{Studying Urban Form and Resilience through Large-Scale Street Network Analysis.} University of California, Santa Barbara, Department of Geography. Santa Barbara, California. Jan 30.
+
+    %     \item[2018] \tab{}\enquote{Seeing Cities through New Technologies and Big Data.} University of Oregon, School of Planning, Public Policy, and Management. Eugene, Oregon. Jan 25.
+
+    %     \item[2018] \tab{}\enquote{Urban Form, Sustainability, and Large-Scale Street Network Analysis.} Northeastern University, School of Public Policy and Urban Affairs. Boston, Massachusetts. Jan 18.
+
+    %     \item[2018] \tab{}\enquote{Understanding Urban Form and Circulation through Large-Scale Street Network Analysis.} Dartmouth College, Department of Geography. Hanover, New Hampshire. Jan 15.
+
+    %     \item[2017] \tab{}\enquote{Street Network Analyses of Urban Form Resilience and Equity.} University of Chicago, Mansueto Institute for Urban Innovation. Chicago, Illinois. Nov 2.
+
+    %     \item[2017] \tab{}\enquote{Measuring Urban Form Sustainability with Topological and Geometric Street Network Analysis.} Stanford University, Sustainable Urban Systems Initiative. Palo Alto, California. Oct 26.
+
+    %     \item[2017] \tab{}\enquote{Graph-Theoretic Representation and Analysis of Urban Street Networks.} Montana State University, Department of Computer Science. Bozeman, Montana. Oct 16.
+
+    %     \item[2017] \tab{}\enquote{OpenStreetMap Network Data for Transportation Planning.} Remix Transit Planning. San Francisco, California. Aug 16.
+
+    %     \item[2017] \tab{}\enquote{Street Networks: Urban Form and Resilience.} University of Florida, Department of Urban and Regional Planning. Gainesville, Florida. May 8.
+
+    %     \item[2017] \tab{}\enquote{Scalable Methods for Acquiring, Analyzing, and Visualizing Urban Street Networks.} The Santa Fe Institute. Santa Fe, New Mexico. Feb 2.
+
+    %     \item[2016] \tab{}\enquote{Urban Data Science for Studying Housing Affordability and Urban Form.} NYU Center for Urban Science and Progress. Brooklyn, New York. Dec 14.
+
+    %     \item[2016] \tab{}\enquote{New Insights into Rental Housing Markets: Web Scraping and Analyzing Craigslist Rental Listings.} City of Oakland. Oakland, California. May 12.
+
+    %     \item[2016] \tab{}\enquote{New Insights into Rental Housing Markets: Web Scraping and Analyzing Craigslist Rental Listings.} City of San Francisco, Citywide Planning Division. San Francisco, California. Apr 19.
+
+    %     \item[2016] \tab{}\enquote{Smart Cities, Technology, and Representation: Prospects and Challenges.} Adobe Systems. Sustainability Speaker Series. San Jose, California. Jan 28.
+
+    % \end{tablist}
+
+    % \subsection*{Invited Symposium Talks}
+
+    % \begin{tablist}
+
+    % \item[2023] \tab{}\enquote{Spatial Analytics to Benchmark and Monitor Healthy and Sustainable Cities.} Exploring the Research Opportunities from the Intersection of Advancing Planetary Health and Cardiovascular Disease: Improving Human Health. Hosted by the U.S. National Institutes of Health. Dec 14--15.
+
+    % \item[2023] \tab{}\enquote{The 1,000 Cities Challenge.} Cities, Form, Environmental Exposures, and Health Impacts. Hosted by the Barcelona Institute for Global Health. Sitges, Spain. Oct 24--25.
+
+    % \item[2023] \tab{}\enquote{The Evolving Housing Search: Digitalization and Market Legibility.} Southern California Association of Governments Annual Demographic Workshop. Los Angeles, California. Sep 20.
+
+    % \item[2022] \tab{}\enquote{Using Open Data and Open-Source Software to Develop Spatial Indicators of Urban Design and Transport Features for Achieving Healthy and Sustainable Cities.} Global Launch of the Lancet Global Health Series on Urban Design, Transport, and Health. Hosted by \textit{The Lancet Global Health}. May 10--12.
+
+    % \item[2022] \tab{}\enquote{Digitalization of the Housing Search: Homeseekers, Gatekeepers, and Market Legibility.} Bringing Digitalization Home: How Can Technological Changes Address Housing-Related Challenges? Hosted by the Harvard University Joint Center for Housing Studies and Graduate School of Design. Cambridge, Massachusetts. Mar 24--26.
+
+    % \item[2021] \tab{}\enquote{Housing Search in the Age of Big Data: Smarter Cities or the Same Old Blind Spots?} The Intersection of Smart Cities with Housing and Community Development. Hosted by \textit{Housing Policy Debate} and Virginia Tech. Feb 15.
+
+    % \item[2019] \tab{}Spatial Data Science Symposium: Setting the Spatial Data Science Agenda. Hosted by the University of California, Santa Barbara. Santa Barbara, California. Dec 9--11.
+
+    % \end{tablist}
+
+    % \subsection*{Campus Talks}
+
+    % \begin{tablist}
+
+    %     %\item[2023] \tab{}\enquote{Generalizability in Urban Science.} USC Price School Faculty Seminar Series. Los Angeles, California. Nov 14.
+
+    %     \item[2023] \tab{}\enquote{Resilient by Design: Simulating Street Network Disruptions across Every Urban Area in the World.} METRANS University Transportation Center Speaker Series. Los Angeles, California. Nov 2.
+
+    %     \item[2022] \tab{}\enquote{Local Inequities in the Relative Production of and Exposure to Vehicular Air Pollution in Los Angeles.} METRANS University Transportation Center Speaker Series. Los Angeles, California. Mar 30.
+
+    %     \item[2020] \tab{}\enquote{Street Network Models and Indicators for Every Urban Area in the World.} METRANS University Transportation Center Speaker Series. Los Angeles, California. Oct 27.
+
+    %     \item[2018] \tab{}\enquote{Urban Street Network Science with OSMnx.} Northeastern University Seattle Campus. Seattle, Washington. Nov 28.
+
+    %     \item[2018] \tab{}\enquote{The Legibility of Urban Spatial Order in Computational Street Network Analysis.} NUVis: Northeastern University Visualization Consortium. Boston, Massachusetts. Oct 18.
+
+    %     \item[2017] \tab{}\enquote{Urban Street Network Analysis with OSMnx.} Geospatial Innovation Facility, College of Natural Resources, University of California, Berkeley. Berkeley, California. Oct 5.
+
+    % \end{tablist}
+
+
+
+    % \section*{Conference Activity}
+
+    \section*{Conferences and Workshop Organized}
+
+    % \subsection*{Keynote and Plenary Addresses}
+
+    % \begin{tablist}
+
+    %     \item[2024] \tab{}\enquote{The Design of American Streets.} Keynote address. Induction ceremony of the Nu Theta chapter of Gamma Theta Upsilon, the international geographical honor society. Los Angeles, California. Apr 23.
+
+    %     \item[2021] \tab{}\enquote{Urban Mobility and Street Network Science.} Annual Regional Studies/Regional Science keynote lecture. Regional Studies Association Winter Conference. Nov 8.
+
+    %     \item[2019] \tab{}\enquote{Geographic Information, Spatial Networks, and the New Urban Science.} 8\textsuperscript{th} annual \textit{Transactions in GIS} plenary address. American Association of Geographers Annual Meeting. Washington, DC.\@ Apr 3--7.
+
+    %     \item[2018] \tab{}\enquote{The Legible and the Illegible: Urban Science, City Design, and Human Circulation.} Plenary address. The Architect of the Future Conference. Moscow, Russia. Sep 10--11.
+
+    % \end{tablist}
+
+    % \subsection*{Conferences and Workshop Organized}
+
+    \begin{tablist}
+
+        \item[2024] \tab{}Legal Matters in Web3, University of Chicago
+        \item[2023] \tab{}Legal Matters in Web3, University of Chicago
+        \item[2018] \tab{}The Quality of Life in India Slums, University of Chicago Center in Delhi
+        \item[2016] \tab{}The Methodological Underpinnings of Legal Research, University of Chicago
+        \item[2013] \tab{}The Future of Health Care Reform, University of Chicago
+        \item[2009] \tab{}Pharmaceutical Drug Development, Petrie Flom Center, Harvard Law School
+        \item[2006] \tab{}Current Research on Medical Malpractice Liability, University of Chicago Law School
+        \item[2003--05] \tab{}Sadie Lewis Webb Program in Law and Biomedicine’s Health Law and Policy Speakers Series, University of Virginia Law School
+        \item[2004] \tab{}John M. Olin Conference on Empirical Research in Corporate, Securities, and Bankruptcy Law, University of Virginia Law School
+        
+        % \item[2017] \tab{}\enquote{Emerging Computational Methods in Urban Design.} Association of Collegiate Schools of Planning Annual Conference. Denver, Colorado. Oct 12--15.
+
+    \end{tablist}
+
+    % \subsection*{Sessions Chaired/Moderated}
+
+    % \begin{tablist}
+
+    %     \item[2021] \tab{}\enquote{Big Data and Machine Learning for Urban Mobility.} Association of Collegiate Schools of Planning Annual Conference. Miami, Florida. Oct 21--23.
+
+    %     \item[2019] \tab{}\enquote{Machine Learning Methods.} Association of Collegiate Schools of Planning Annual Conference. Greenville, South Carolina. Oct 24--27.
+
+    %     \item[2019] \tab{}\enquote{Social Systems.} International Conference on Network Science. Burlington, Vermont. May 27--31.
+
+    %     \item[2018] \tab{}\enquote{Smart Cities Technologies for Transportation Systems.} Smart Cities: Critical Infrastructure Symposium. Seattle, Washington. Nov 29.
+
+    % \end{tablist}
+
+    % \subsection*{Invited Panelist}
+
+    % \begin{tablist}
+
+    %     \item[2022] \tab{}\enquote{Teaching Data Science in Urban Planning.} Panelist with Marta Gonz{\'a}lez, Sarah Williams, and Anthony Vanky; chaired by Adam Millard-Ball. Association of Collegiate Schools of Planning Annual Conference. Toronto, Canada. Nov 3--6.
+
+    %     \item[2022] \tab{}\enquote{City Intelligence with Open Data.} Panelist with Stephanie Dietrick, Cy Chan, and Sobhan Moosavi; chaired by Hua Wei. ACM International Conference on Web Search and Data Mining. Phoenix, Arizona. Feb 21--25.
+
+    %     \item[2021] \tab{}\enquote{Machine Learning in Public Health.} Panelist with Catherine D'Ignazio, Jing Gao, and Alykhan Mohamed; chaired by Rumi Chunara. Conference on Neural Information Processing Systems. Dec 6--14.
+
+    %     \item[2021] \tab{}\enquote{Plenary Session: AI and Big Data in Real Estate and Urban Studies.} Panelist with Stephanie Sy, Thies Lindenthal, Man Cho, and Warren Wan; chaired by Tien Foo Sing. Joint Real Estate Conference of the American Real Estate and Urban Economics Association, Asian Real Estate Society, and Global Chinese Real Estate Congress. Singapore. Jul 18--21.
+
+    %     \item[2020] \tab{}\enquote{Nationwide Studies of Urban Form: Evolution, Innovation, and New Opportunities.} Panelist with Reid Ewing, Shima Hamidi, and Catherine Brinkley; chaired by Steven Richter. Association of Collegiate Schools of Planning Annual Conference. Nov 5--8.
+
+    %     \item[2020] \tab{}\enquote{Urban Data Science Beyond the Hype: Understanding the Challenges and Opportunities of Incorporating Data Science into Urban Planning Pedagogy and Practice.} Panelist with Karen Chapple and Atul Pokharel; chaired by Abigail Cochran and Manuel Santana. Association of Collegiate Schools of Planning Annual Conference. Nov 5--8.
+
+    %     \item[2019] \tab{}\enquote{Urban Data Science: Methods and Models for Our Changing Cities.} Panelist with Vanessa Frias-Martinez, Wenfei Xu, Song Gao, and Ate Poorthuis; chaired by Levi Wolf and Wei Kang. American Association of Geographers Annual Meeting. Washington, DC.\@ Apr 3--7.
+
+    %     \item[2018] \tab{}\enquote{Big Ideas Session on Civic Analytics and Urban Science.} Panelist with Luis Bettencourt, Marta Gonz{\'a}lez, and Sarah Williams; chaired by Constantine Kontokosta. Association of Collegiate Schools of Planning Annual Conference. Buffalo, New York. Oct 25--28.
+
+    %     \item[2018] \tab{}\enquote{Who Benefits from \enquote{Smart City} Technologies? How Can They Be a Piece of the Puzzle Toward Social and Environmental Justice?} Panelist with Lisa Schweitzer, Clint Andrews, and Tom Sanchez; chaired by Mehdi Heris. Association of Collegiate Schools of Planning Annual Conference. Buffalo, New York. Oct 25--28.
+
+    %     \item[2017] \tab{}\enquote{Public Communication Strategies for Planning Academics.} Panelist with Jennifer Dill, Yingling Fan, and Justin Hollander; chaired by Carissa Slotterback. Association of Collegiate Schools of Planning Annual Conference. Denver, Colorado. Oct 12--15.
+
+    % \end{tablist}
+
+    % \subsection*{Conference Papers Presented\footnote{Presenting author \textit{italicized} if other than first author.}}
+
+    % \begin{tablist}
+
+    %     \item[2024] \tab{}G. Boeing and J. Ha. \enquote{Vulnerability of Commutes: A Nationwide Simulation of Street Network Disruptions.} Association of Collegiate Schools of Planning Annual Conference. Seattle, Washington. Nov 7--9.
+
+    %     \item[2024] \tab{}G. Boeing and Y. Zhou. \enquote{Uncongested Travel Time Prediction from Sparse Open Data.} Association of Collegiate Schools of Planning Annual Conference. Seattle, Washington. Nov 7--9.
+
+    %     \item[2024] \tab{}J.~G. Harten, G. Boeing, and M. Lore. \enquote{Revealing the Exclusionary Language of Shared Rental Ads Through AI.} Association of Collegiate Schools of Planning Annual Conference. Seattle, Washington. Nov 7--9.
+
+    %     \item[2024] \tab{}M. Lowe, C. Higgs, G. Boeing, X. Delclòs Alió, A. Queralt, E. Resendiz, D. Adlakha, B. Giles-Corti, E. Cerin, J. Sallis, A. Vernez Moudon, J. Arundel, S. Liu, V. Heikinheimo, J. Schipperijn, and D. Salvo. \enquote{1,000 Cities Challenge Workshop: Calculating Policy and Spatial Indicators of Healthy and Sustainable Cities.} Urban Transitions Conference. Sitges, Spain. Nov 5--7.
+
+    %     \item[2024] \tab{}M. Lowe, D. Salvo, C. Higgs, D. Adlakha, E. Resendiz, G. Boeing, R. Turner, J. Sallis, E. Cerin, A.~V. Moudon, E. Hinckson, J. Arundel, S. Liu, V. Heikinheimo, and B. Giles-Corti. \enquote{1,000 Cities Challenge: Scaling Up the Global Observatory of Healthy and Sustainable Cities.} International Society for Physical Activity and Health Congress. Paris, France. Oct 28--31.
+
+    %     \item[2024] \tab{}J.~G. Harten and G. Boeing. \enquote{Single Women Wanted: The Role of Gender in Accessing Shared Housing.} International Conference on Urban Affairs. New York, New York. Apr 24--27.
+
+    %     \item[2024] \tab{}G. Boeing and J. Ha. \enquote{Resilient by Design: Simulating Street Network Disruptions across Every Urban Area in the World.} American Association of Geographers Annual Meeting. Honolulu, Hawaii. Apr 16--20.
+
+    %     \item[2024] \tab{}M. Awad, S. Bacq, G. Boeing, D. Dentoni, and S. Osbourne. \enquote{Collective Organizing for Urban Problems: An Integrative Review and Interdisciplinary Roadmap from Entrepreneurship, Public Management, and Urban Planning.} Journal of Management Studies Conference. Edinburgh, Scotland. Mar 5--6.
+
+    %     \item[2023] \tab{}M. Lore, J.~G. Harten, and G. Boeing. \enquote{Computer-Assisted Methods for Thematic Coding of Large-Scale Text Data in Urban Planning.} Association of Collegiate Schools of Planning Annual Conference. Chicago, Illinois. Oct 19--21.
+
+    %     \item[2023] \tab{}G. Boeing and \textit{Y. Zhou}. \enquote{Improving the Accuracy of Intersection Counts and Density Measures of Urban Street Networks.} Association of Collegiate Schools of Planning Annual Conference. Chicago, Illinois. Oct 19--21.
+
+    %     \item[2023] \tab{}G. Boeing and \textit{J. Ha}. \enquote{Simulating Street Network Resilience and Robustness around the World.} Association of Collegiate Schools of Planning Annual Conference. Chicago, Illinois. Oct 19--21.
+
+    %     \item[2023] \tab{}G. Boeing, \textit{C. Pilgram}, and Y. Lu. \enquote{Street Network Design and Transport-Related Greenhouse Gas Emissions around the World.} Transportation Research Board Annual Meeting. Washington, DC.\@ Jan 8--12.
+
+    %     \item[2022] \tab{}J.~G. Harten and G. Boeing. \enquote{Negotiating Vulnerability: The Role of Gender in Shared Housing.} Association of Collegiate Schools of Planning Annual Conference. Toronto, Canada. Nov 3--6.
+
+    %     \item[2022] \tab{}G. Boeing, C. Higgs, S. Liu, B. Giles-Corti, J.~F. Sallis, E. Cerin, M. Lowe, D. Adlakha, E. Hinckson, A.~V. Moudon, D. Salvo, M.~A. Adams, L.~V. Barrozo, T. Bozovic, X. Delclòs-Alió, J. Dygrýn, S. Ferguson, K. Gebel, T.~P. Ho, P. Lai, J.~C. Martori, K. Nitvimol, A. Queralt, J.~D. Roberts, G.~H. Sambo, J. Schipperijn, D. Vale, N. Van de Weghe, G. Vich, and J. Arundel. \enquote{Using Open Data and Open-Source Software to Develop Spatial Indicators of Urban Design and Transport Features for Achieving Healthy and Sustainable Cities.} International Society for Physical Activity and Health Congress. Abu Dhabi, United Arab Emirates. Oct 23--26.
+
+    %     \item[2022] \tab{}G. Boeing. \enquote{Measuring Healthy, Sustainable Cities: Global Urban Indicators from Open Data.} World Planning Schools Congress. Nusa Dua, Indonesia. Aug 29--Sep 2.
+
+    %     \item[2022] \tab{}G. Boeing, \textit{Y. Lu}, C. Pilgram, and P. Mannino. \enquote{Race, Class, and the Production of and Exposure to Vehicular Pollution in Los Angeles.} Association for Public Policy Analysis \& Management Fall Conference. Austin, Texas. Mar 27--29.
+
+    %     \item[2022] \tab{}G. Boeing, Y. Lu, C. Pilgram, and P. Mannino. \enquote{Local Inequities in the Relative Production of and Exposure to Vehicular Air Pollution in Los Angeles.} American Association of Geographers Annual Meeting. New York, NY.\@ Feb 25--Mar 1.
+
+    %     \item[2022] \tab{}G. Boeing, \textit{Y. Lu}, C. Pilgram, and P. Mannino. \enquote{Local Inequities in the Relative Production of and Exposure to Vehicular Air Pollution in Los Angeles.} Transportation Research Board Annual Meeting. Washington, DC.\@ Jan 9--13.
+
+    %     \item[2021] \tab{}S. Jamal, E. Desjardins, G. Boeing, R. Lovelace, and A. Paez. \enquote{Using R to Develop Open Source Course Packages with Computational Notebooks: An Example of Transportation Geography.} Innovations in Education Conference. Hamilton, Canada. Dec 9--10.
+
+    %     \item[2021] \tab{}C. Higgs, J. Rozek, A. Alderton, B. Giles-Corti, H. Badland, C. De Gruyter, D. Adlakha, K. Simons, A. Both, G. Boeing, E. Cerin, A. De Livera, S. Liu, M. Chandrabose, J.~F. Sallis, L. Gunn, and E. Hinckson. \enquote{Calculation of Policy-Relevant Spatial Indicators of Urban Liveability: Experiences of Scaling a Research Programme from Local to Global.} State of Australasian Cities Conference. Melbourne, Australia. Dec 1--3.
+
+    %     \item[2021] \tab{}G. Boeing, \textit{Y. Lu}, C. Pilgram, and P. Mannino. \enquote{Race, Class, and the Production of and Exposure to Vehicular Pollution in Los Angeles.} Association of Collegiate Schools of Planning Annual Conference. Miami, Florida. Oct 21--23.
+
+    %     \item[2021] \tab{}S. Liu, C. Higgs, J. Arundel, G. Boeing, N. Cerdera, and D. Moctezuma. \enquote{A Generalized Framework for Measuring Pedestrian Accessibility around the World Using Open Data.} Association of Collegiate Schools of Planning Annual Conference. Miami, Florida. Oct 21--23.
+
+    %     \item[2021] \tab{}G. Boeing. \enquote{Street Network Models and Indicators for Every Urban Area in the World.} Transportation Research Board Annual Meeting. Jan 25--29.
+
+    %     \item[2020] \tab{}G. Boeing. \enquote{Street Network Models, Indicators, and Relationships with Vehicular Emissions for Every Metropolitan Area in the World.} Association of Collegiate Schools of Planning Annual Conference. Nov 5--8.
+
+    %     \item[2020] \tab{}G. Boeing. \enquote{The Street Grid and Car Ownership: Trends in U.S. Transportation Network Design.} Transportation Research Board Annual Meeting. Washington, DC.\@ Jan 12--16.
+
+    %     \item[2019] \tab{}G. Boeing. \enquote{Off the Grid: The Evolution of American Street Network Planning and Design.} Association of Collegiate Schools of Planning Annual Conference. Greenville, South Carolina. Oct 24--27.
+
+    %     \item[2019] \tab{}G. Boeing and \textit{W. Riggs} \enquote{Converting One-Way Streets to Two-Way Streets to Improve Transportation Network Efficiency and Reduce Emissions.} Association of Collegiate Schools of Planning Annual Conference. Greenville, South Carolina. Oct 24--27.
+
+    %     \item[2019] \tab{}G. Boeing. \enquote{Urban Spatial Order: Street Network Orientation, Configuration, and Entropy.} International Conference on Network Science. Burlington, Vermont. May 27--31.
+
+    %     \item[2019] \tab{}G. Boeing. \enquote{The Legibility of Urban Form: Spatial Information Platforms and Visualization.} International Conference on Urban Experience and Design. Medford, Massachusetts. Apr 26.
+
+    %     \item[2019] \tab{}G. Boeing. \enquote{Online Rental Housing Market Representation and the Digital Reproduction of Urban Inequality.} Boston Area Research Initiative Annual Conference. Boston, Massachusetts. Apr 26.
+
+    %     \item[2019] \tab{}G. Boeing. \enquote{The Evolution of American Street Network Design and Planning.} Urban Affairs Association Annual Conference. Los Angeles, California. Apr 24--27.
+
+    %     \item[2019] \tab{}A. Abdelkader, G. Boeing, \textit{B.~T. Fasy}, and D.~L. Millman. \enquote{Local Persistent Homology-Based Distances between Nonplanar Road Networks.} Joint Mathematics Meetings. Baltimore, Maryland. Jan 16--19.
+
+    %     \item[2018] \tab{}A. Abdelkader, G. Boeing, B.~T. Fasy, and D.~L. Millman. \enquote{Topological Distance Between Nonplanar Transportation Networks.} Fall Workshop on Computational Geometry. Queens, New York. Oct 26--27.
+
+    %     \item[2018] \tab{}G. Boeing. \enquote{Sociodemographic Representation of Online Rental Housing Listings: Information Surpluses and Deficits.} Association of Collegiate Schools of Planning Annual Conference. Buffalo, New York. Oct 25--28.
+
+    %     \item[2018] \tab{}P. Waddell, I. Garcia-Dorado, S. Maurer, G. Boeing, M. Gardner, E. Porter, and D. Aliaga. \enquote{Urban Modeling Without Zones: A Metropolitan Graph-Based Microsimulation of Real Estate Markets and Transportation.} Association of Collegiate Schools of Planning Annual Conference. Buffalo, New York. Oct 25--28.
+
+    %     \item[2018] \tab{}G. Boeing. \enquote{Transportation Network Modeling and Urban Equity.} Dukakis Center for Urban and Regional Policy Transportation Equity Conference. Boston, Massachusetts. Oct 19.
+
+    %     \item[2018] \tab{}P. Waddell, I. Garcia-Dorado, S. Maurer, G. Boeing, M. Gardner, E. Porter, and D. Aliaga. \enquote{Architecture for Modular Microsimulation of Real Estate Markets and Transportation.} Symposium on Applied Urban Modelling. Cambridge, England. Jun 27--29.
+
+    %     \item[2017] \tab{}G. Boeing. \enquote{New Methods for Acquiring and Analyzing Worldwide Street Network Data: A Multiscale Analysis of 27,000 Urban Street Networks.} Association of Collegiate Schools of Planning Annual Conference. Denver, Colorado. Oct 12--15.
+
+    %     \item[2016] \tab{}G. Boeing. \enquote{Craigslist and U.S. Rental Housing Markets.} American Planning Association Annual Conference. Phoenix, Arizona. Apr 2--5.
+
+    %     \item[2016] \tab{}G. Boeing. \enquote{Understanding Informal Rental Housing Markets through Public Data.} American Association of Geographers. San Francisco, California. Mar 29--Apr 2.
+
+    %     \item[2016] \tab{}J.~M. Barajas, G. Boeing, and \textit{J. Wartell}. \enquote{Neighborhood Change, One Pint at a Time: The Impact of Local Characteristics on Craft Breweries.} Urban Affairs Association Annual Conference. San Diego, California. Mar 16--19.
+
+    %     \item[2015] \tab{}G. Boeing. \enquote{Methods for Measuring the Aggregate Complexity Outcomes of Urban Design.} International Conference on Complex Systems. Tempe, Arizona. Sep 28--Oct 2.
+
+    %     \item[2015] \tab{}G. Boeing. \enquote{Pedagogy of Urban Informatics.} Environmental Design Circus. Berkeley, California. Mar 6.
+
+    %     \item[2014] \tab{}G. Boeing and P. Waddell. \enquote{Web Scraping Urban Data: Lessons from the Lab and the Classroom.} Association of Collegiate Schools of Planning Annual Conference. Philadelphia, Pennsylvania. Oct 30--Nov 2.
+
+    %     \item[2014] \tab{}G. Boeing, D. Church, H. Hubbard, J. Mickens, and L. Rudis. \enquote{LEED-ND and Perceptions of Livability.} Environmental Design Circus. Berkeley, California. Mar 13.
+
+    % \end{tablist}
+
+    \section*{Films}
+
+    \begin{itemize}
+
+        \item \textit{Basti: The Story of Indian Slums}, Executive Producer
+
+    \end{itemize}    
+
+    \section*{Awards, Grants, Research Projects}
+
+    \subsection*{Awards and Honors}
+
+    \begin{tablist}
+
+        \item[2022] \tab{}Apolitical’s 100 Most Influential Academics in Government.
+        \item[2021--] \tab{}Member, American Academy of Arts and Sciences.
+        \item[2020] \tab{}Emergent Ventures Prize (for serological work).
+        \item[2020] \tab{}Emergent Ventures Prize (for epidemiological modeling work).
+        \item[2000] \tab{}Order of the Coif.
+        \item[1999] \tab{}Stepan Chemical Company Scholarship.
+        \item[1998-00] \tab{}John M. Olin Fellowship in Law and Economics.
+        \item[1997-00] \tab{}Bradley Foundation Fellowship.
+        \item[1997] \tab{}Beale Prize. 
+        \item[1996] \tab{}University of Chicago Fellowship
+        \item[1995] \tab{}Distinction (top score), Econometrics Field Exam, University of Chicago, Department of Economics. 
+        
+    \end{tablist}
+
+    \subsection*{Competitive Grants}
+
+    \begin{tablist}
+
+        \item[2024] \tab{}The SEWA Wage Insurance Experiment, from DERF.
+        \item[2022] \tab{}Measure Excess Death due to COVID in India using Verbal Autopsies, from Emergent Ventures.
+        \item[2022] \tab{}The SEWA Wage Insurance Experiment, from Weiss Fund.
+        \item[2019] \tab{}The Indian Health Insurance Experiment, from IGC-India.
+        \item[2019] \tab{}The Indian Health Insurance Experiment, from Tata Centre for Development at UChicago.
+        \item[2017] \tab{}The Economics of Indian Slums, from Tata Centre for Development at UChicago.
+        \item[2017] \tab{}The SEWA Wage Insurance Experiment, from Tata Centre for Development at UChicago.
+        \item[2016] \tab{}Impact Evaluation of Mission Kakatiya (Water Tank Rehabilitation Programme in Telangana), from Tata Centre for Development at UChicago.
+        \item[2016] \tab{}The Indian Health Insurance Experiment, from Tata Centre for Development at UChicago.
+        \item[2016--18] \tab{}Sanitation and River Quality Surveillance Project in Andra Pradesh, from the Administrative Staff College of India, with support from the Bill and Melinda Gates Foundation.  
+        \item[2016] \tab{}Tata Centre for Development at University of Chicago, from the Tata Trusts.
+        \item[2015-17] \tab{}Education Projects in Rajasthan and Haryana at the International Innovation Corps, from the Michael and Susan Dell Foundation.
+        \item[2015] \tab{}The Indian Health Insurance Experiment, from the Becker Friedman Institute.
+        \item[2014--15] \tab{}Unpacking the Value of Health Insurance in India, from Neubauer Collegium, University of Chicago, with Alessandra Voena and Anuj Shah.
+        \item[2013] \tab{}Collaborative Partnership with the International Innovation Corps, from USAID.
+        \item[2013--14] \tab{}The Indian Health Insurance Experiment, from Department for International Development and the Public Health Foundation of India, with Ramanan Laxminarayan (co-principal investigator).
+        \item[2010] \tab{}Does Advertising Affect the Physiological Efficacy of Drugs? from University of Chicago Booth School of Business - Initiative on Global Markets, with Emir Kamenica.
+        \item[2009] \tab{}Conflicts of Interest in Medical Journal Publications, from University of Chicago Booth School of Business - Initiative on Global Markets and University of Chicago Law School, with Christian Leuz.
+        \item[2007] \tab{}Estimating the Negative Resistance Externality from Antibiotic Use, from University of Chicago Program in Pharmaceutical Policy, \$11,667, with Amitabh Chandra and Darius Lakdawalla
+        \item[2007--08] \tab{}Measuring Heterogeneity in Treatment Effects, from Pfizer Inc., Evidence-based Medicine Group, \$35,000, with Barton Hamilton.
+        \item[2005] \tab{}Hidden Components of Executive Compensation: Supplemental Employee Retirement Plans and Change-in-Control Payments, from Bankard Fund, \$25,000, with Rajesh Aggarwal.
+        
+        %\item[2024--26] \tab{}Mobility Equity Research Initiative: Reducing Accessibility Gaps for the Most Disadvantaged (\$2,970,000). U.S. Department of Transportation research grant. Co-I.\@
+
+        %\item[2024--25] \tab{}Alleviating Health Inequities from Air Pollution in the Gateway Cities Region: An Evidence-Based, Community-Engaged, and Interdisciplinary Approach (\$249,992). USC President's Sustainability Initiative Award. Co-I.\@
+
+        %\item[2024--25] \tab{}Identifying Infrastructure Impediments to Increased Community-Wide Cycling Activity (\$118,389). U.S. Department of Transportation/Pacific Southwest Region University Transportation Center research grant. Co-PI.\@
+
+        %\item[2024--25] \tab{}The Center for Emissions Reduction, Resiliency, and Climate Equity in Transportation (\$239,888). U.S. Department of Transportation research grant. Co-I.\@
+
+    \end{tablist}
+
+    \subsection*{Research Projects}
+
+    \begin{itemize}
+
+        \item Principal Investigator, Measure Excess Death due to COVID in India using Verbal Autopsies, 2022
+        \item Principal Investigator, Economics of Slums, 2019. 
+        \item Principal Investigator, the SEWA Wage Insurance Experiment, 2019.
+        \item Principal Investigator, Impact Evaluation of Mission Kakatiya (Water Tank Rehabilitation Programme in Telangana), 2016.
+        \item Principal Investigator, the Indian Health Insurance Experiment, 2013.
+        \item Principal Investigator, Medical trial about the effect of DTC advertising on the efficacy of Claritin, conducted at the Nasal Physiology Lab, University of Chicago Hospital, 2008.
+        \item Principal Investigator, Experiment concerning on subjects’ control over own expectations in the context of a trial of the effect of glucose beverage on cognitive performance. 
+        \item Principal Investigator, Medical trial of the effect of caffeine on blood pressure and pulse, conducted at the General Clinical Research Center, University of Virginia, HIC \#11701.
+
+    \end{itemize}
+
+    \section*{Courses Taught}
+
+    *Primarily for law students unless otherwise indicated
+
+    \subsection*{University of Chicago}
+
+    \begin{itemize}
+
+        \item Bankruptcy, Spring 2010, Fall 2007, Winter 2007, Winter 2006.
+        \item Big Question: Why is Fertility Falling? (for undergraduates), Spring 2025.
+        \item Big Problems (for law and business students), Spring 2021, Spring 2020, Spring 2019, Spring 2018, Spring 2017. 
+        \item Blockchain \& Cryptocurrencies (for law and business students), Spring 2024, Spring 2023, Winter 2020, Winter 2019.
+        \item Canonical Ideas in the Law, Fall 2015 and Spring 2016; Fall 2014 and Spring 2015.
+        \item Contracts, Winter 2010.
+        \item Federal Budget Policy, Spring 2014, Spring 2012.
+        \item Federal Reserve System, Spring 2011.  
+        \item Food and Drug Law, Fall 2009, Spring 2008.
+        \item Health Law, Spring 2013, Fall 2011, Spring 2011, Spring 2008, Spring 2007, Fall 2006, Spring 2006, Fall 2003.
+        \item Health Law and Policy, Fall 2021, Winter 2020.
+        \item Insurance Law, Winter 2008.
+        \item Law \& Economic Development (for law and Masters/PhD students in other departments), Fall 2023, Fall 2021, Spring 2020, Spring 2019, Spring 2018.
+        \item Law \& Economics (for law students), Winter 2025, Fall 2017, Fall 2016, Fall 2015, Fall 2014, Fall 2013, Fall 2012, Fall 2011.
+        \item Law \& Economics (Economics PhD class), Spring 2014, Spring 2013, Spring 2012.
+        \item Microeconomics, Spring 2025, Spring 2024, Spring 2023. 
+        \item Securities Law, Spring 2022, Spring 2021. 
+        
+    \end{itemize}
+
+    \subsection*{Harvard University}
+
+    \begin{itemize}
+
+        \item Health Law, Fall 2008. 
+        \item Health Law Policy Workshop, Fall 2008, Spring 2009.
+
+    \end{itemize}
+
+    \subsection*{University of Virginia}
+
+    \begin{itemize}
+
+        \item Bankruptcy (Law \& Business track, U. Virginia), Spring 2005.
+        \item Corporations, Spring 2005, Spring 2004, Spring 2003.
+        \item Executive Compensation, Spring 2005. 
+        \item Health Economics (University of Virginia, Department of Economics), Spring 2004. 
+        \item Health Policy (seminar), Fall 2012, Spring 2010, Fall 2003 (University of Virginia). 
+
+    \end{itemize}
+
+   %  \section*{Service}
+
+   % \subsection*{Board of Directors}
+
+   % \begin{tablist}
+
+   %     \item[2024--]    \tab{}The Public Good Projects, New York, New York
+
+   % \end{tablist}
+
+   %  \subsection*{Academic Journal Editorship}
+
+   %  \begin{tablist}
+
+   %      \item[2020--]   \tab{}\textit{Urban Findings}, editorial board
+   %      \item[2021--24] \tab{}\textit{Urban Studies}, editorial board
+   %      \item[2021]     \tab{}\textit{PLOS One}, guest academic editor
+   %      \item[2013--14] \tab{}\textit{Berkeley Planning Journal}, book review editor
+
+   %  \end{tablist}
+
+   %  \subsection*{Service to the Field}
+
+   %  \begin{tablist}
+
+   %      \item[2024--]   \tab{}U.S. NIST Artificial Intelligence Safety Institute Consortium
+   %      \item[2024--]   \tab{}Western Wildfire Resilience Index, advisory committee
+   %      \item[2022--]   \tab{}Global Observatory of Healthy and Sustainable Cities, executive committee
+   %      \item[2021--22] \tab{}Association of Collegiate Schools of Planning, review and appraisal committee
+   %      \item[2021--22] \tab{}Spatial Data Science Symposium, program committee
+   %      \item[2021]     \tab{}World Society for Transport and Land Use Research, emerging data and technologies track co-lead
+   %      \item[2019--21] \tab{}Association of Collegiate Schools of Planning, outreach and engagement task force
+   %      \item[2019--20] \tab{}Future Cities Challenge, program committee
+   %      \item[2018--20] \tab{}Association of Collegiate Schools of Planning, review and appraisal committee
+   %      \item[2018--20] \tab{}Symposium on Simulation for Architecture and Urban Design, scientific committee
+
+   %  \end{tablist}
+
+   %  \subsection*{Service to the University}
+
+   %  \begin{tablist}
+   %      \item[2024--]   \tab{}USC Price dean search committee
+   %      \item[2024--]   \tab{}USC Price research committee
+   %      \item[2020--]   \tab{}USC Price Ph.D. degree committee
+   %      \item[2024]     \tab{}USC Price Chief Technology Officer search committee
+   %     %\item[2023--24] \tab{}USC Price Urban Planning and Development Ph.D. Admissions Subcommittee (chair)
+   %      \item[2022--23] \tab{}USC Healthy Campus built environment and sustainability committee
+   %      \item[2020--21] \tab{}USC Price research committee
+   %     %\item[2020--21] \tab{}USC Price Urban Planning and Development Ph.D. Admissions Subcommittee (chair)
+   %      \item[2019--20] \tab{}USC DUPSA hiring search committee
+   %      \item[2018--19] \tab{}Northeastern CSSH standing committee on digital proficiencies and quantitative methods
+   %     %\item[2015--16] \tab{}UC Berkeley DCRP Ph.D. Program Faculty Meeting Representative
+   %      \item[2015--16] \tab{}UC Berkeley DCRP Ph.D. program admissions committee
+
+   %  \end{tablist}
+
+    % \subsection*{Doctoral Committees}
+
+    % \begin{itemize}
+
+    %     \item Robert Binder, USC Price, exam committee
+    %     \item Seongmoon Cho, USC Price, exam committee
+    %     \item David Flores Moctezuma, USC Price, exam and dissertation committees
+    %    %\item Shea Ellen Gilliam, USC Spatial Sciences Institute, dissertation committee
+    %     \item James Gross, USC Price, exam and dissertation committees
+    %     \item Jaehyun Ha, USC Price, exam and dissertation committees
+    %     \item Naomi Lee, USC Price, exam committee
+    %     \item Sihan Mao, USC Price, exam committee
+    %     \item Thu Nguyen, USC Price, exam committee
+    %     \item Clemens Pilgram, USC Price, exam and dissertation committees
+    %     \item Marley Randazzo, USC Price, exam committee
+    %     \item Qifan Shao, USC Price, exam committee
+    %     \item Bonnie Wang, USC Price, exam committee
+    %     \item Mengya Xu, USC Spatial Sciences Institute, exam committee and dissertation committees
+    %     \item Li Yi, USC Spatial Sciences Institute, exam and dissertation committees
+    %     \item Yuquan Zhou, USC Price, exam and dissertation committees
+
+    % \end{itemize}
+
+    % \subsection*{Studio Review Jury}
+
+    % \begin{itemize}
+
+    % \item MIT, Workshop on Geographic Information Systems (Prof.\ Sarah Williams), Fall 2018
+
+    % \end{itemize}
+
+
+
+    \section*{Peer and Tenure Review}
+
+    \subsection*{Academic Journal Peer Review}
+
+    \begin{itemize}
+
+        \item \textit{American Economic Review}
+        \item \textit{American Economic Journal: Applied Economics}
+        \item \textit{American Journal of Managed Care}
+        \item \textit{American Law and Economics Review}
+        \item \textit{Annals of Internal Medicine}
+        \item \textit{Econometrica}
+        \item \textit{Economic Journal}
+        \item \textit{Health Affairs}
+        \item \textit{International Review of Law and Economics}
+        \item \textit{Journal of the American Medical Association}
+        \item \textit{Journal of Development Economics}
+        \item \textit{Journal of Human Resources}
+        \item \textit{Journal of Labor Economics}
+        \item \textit{Journal of Law Economics and Organization}
+        \item \textit{Journal of Legal Studies}
+        \item \textit{Journal of Political Economy}
+        \item \textit{National Tax Journal}
+        \item \textit{New England Journal of Medicine}
+        \item \textit{Proceedings of the National Academy of Sciences}
+        \item \textit{Review of Economic Studies}
+        \item \textit{Review of Economics and Statistics}
+        \item \textit{RAND Journal of Economics}
+        \item \textit{Quarterly Journal of Economics}
+        \item \textit{Science}
+        \item \textit{Science Advances}
+
+    \end{itemize}
+
+    \subsection*{Tenure Review}
+
+    \begin{itemize}
+
+        \item Duke University
+        \item Harvard University
+        \item Northwestern University
+        \item Princeton University
+        \item Stanford University
+        \item University of Michigan
+        \item University of Chicago
+        
+    \end{itemize}
+    
+    % \subsection*{Academic Press Peer Review}
+
+    % \begin{itemize}
+
+    %     \item Cambridge University Press
+    %     \item Routledge
+    %     \item Springer Nature
+    %     \item Taylor \& Francis
+
+    % \end{itemize}
+
+    % \subsection*{Funding Agency Peer Review}
+
+    % \begin{itemize}
+
+    %     \item European Science Foundation
+    %     \item Israel Science Foundation
+    %     \item U.S. National Science Foundation
+    %     \item Research Grants Council of Hong Kong
+    %     \item Social Sciences and Humanities Research Council of Canada
+    %     \item United Arab Emirates University, Office of Associate Provost for Research
+
+    % \end{itemize}
+
+    \section*{Memberships}
+
+    \begin{itemize}
+
+        \item American Economic Association
+
+    \end{itemize}
+
+    % \section*{Credentials}
+
+    % \begin{itemize}
+
+    %     \item U.S. Department of Defense secret clearance
+    %     \item U.S. Department of Homeland Security public trust
+    %     \item Project Management Professional (PMP)
+
+    % \end{itemize}
+
+
+
+    % \section*{Consulting}
+
+    % \begin{tablist}
+
+    %     \item[2017--19] \tab{}The Public Good Projects, New York, New York
+    %     \item[2017--18] \tab{}Calthorpe Analytics, Berkeley, California
+    %     \item[2016--18] \tab{}UrbanSim Inc., Berkeley, California
+    %     \item[2013--15] \tab{}Avalon Health Economics, Morristown, New Jersey
+    %     \item[2013]     \tab{}Raimi \& Associates, Berkeley, California
+    %     \item[2010--11] \tab{}Voluntary Service Overseas, London, England
+
+    % \end{tablist}
+
+
+
+    % \section*{Professional Employment}
+
+    % \begin{tablist}
+
+    %     \item[2009--13] \tab{}Accenture, New York, New York; London, England; San Diego, California
+    %     \item[2007--09] \tab{}Permission Data, New York, New York
+    %     \item[2004--07] \tab{}Acumen Inc., Mesa, Arizona
+
+    % \end{tablist}
+
+
+
+    % display today's date as Month Year after a vertical space below the end of the text
+    \begin{center}
+        \vfill
+        Updated \monthyeardate\today
+    \end{center}
+
+\end{document}
